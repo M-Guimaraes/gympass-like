@@ -1,0 +1,7 @@
+{
+  "typescript.suggest.autoImports": true,
+  "editor.formatOnSave": true,
+  "[prisma]": {
+    "editor.formatOnSave": true
+  }
+}
