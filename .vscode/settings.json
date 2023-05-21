@@ -1,6 +1,7 @@
 {
   "typescript.suggest.autoImports": true,
   "editor.formatOnSave": true,
+  "prettier.singleQuote": true,
   "[prisma]": {
     "editor.formatOnSave": true
   }
