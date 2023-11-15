@@ -9,7 +9,7 @@ let checkInsRepository: InMemoryCheckInsRepository;
 let gymsRepository: InMemoryGymsRepository;
 let sut: CheckInUseCase;
 
-//red, green, refactor
+// red, green, refactor
 
 describe('Check In Use Case', () => {
   beforeEach(async () => {
@@ -61,7 +61,7 @@ describe('Check In Use Case', () => {
         userId: 'user-01',
         userLatitude: -33.8807237,
         userLongitude: 150.8064967,
-      })
+      }),
     ).rejects.toBeInstanceOf(MaxNumberCheckInsError);
   });
 
@@ -103,7 +103,7 @@ describe('Check In Use Case', () => {
         userId: 'user-01',
         userLatitude: -33.8666408,
         userLongitude: 150.8188109,
-      })
+      }),
     ).rejects.toBeInstanceOf(MaxDistanceError);
   });
 });

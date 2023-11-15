@@ -21,7 +21,7 @@ const MAX_DISTANCE_IN_KILOMETERS = 0.1;
 
 export class CheckInUseCase {
   constructor(
-    private usersRepository: CheckInsRepository,
+    private checkInsRepository: CheckInsRepository,
     private gymsRepository: GymsRepository
   ) {}
 
@@ -53,13 +53,13 @@ export class CheckInUseCase {
     }
 
     const checkInOnSameDate =
-      await this.usersRepository.findCheckInByUserOnDate(userId, new Date());
+      await this.checkInsRepository.findCheckInByUserOnDate(userId, new Date());
 
     if (checkInOnSameDate) {
       throw new MaxNumberCheckInsError();
     }
 
-    const checkIn = await this.usersRepository.create({
+    const checkIn = await this.checkInsRepository.create({
       gym_id: gymId,
       user_id: userId,
     });
