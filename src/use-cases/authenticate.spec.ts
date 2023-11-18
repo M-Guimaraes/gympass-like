@@ -32,7 +32,7 @@ describe('Authenticate Use Case', () => {
 
   it('should not be able to authenticate with wrong email', async () => {
     await expect(() => sut.execute(registerBody)).rejects.toBeInstanceOf(
-      InvalidCredentialsError
+      InvalidCredentialsError,
     );
   });
 
@@ -44,7 +44,7 @@ describe('Authenticate Use Case', () => {
     });
 
     await expect(() => sut.execute(registerBody)).rejects.toBeInstanceOf(
-      InvalidCredentialsError
+      InvalidCredentialsError,
     );
   });
 });
