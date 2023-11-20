@@ -34,7 +34,7 @@ describe('Register Use Case', () => {
 
     const passwordIsCorrectly = await compare(
       registerBody.password,
-      user.password_hash
+      user.password_hash,
     );
 
     expect(passwordIsCorrectly).toBe(true);
@@ -54,7 +54,7 @@ describe('Register Use Case', () => {
         name: 'Marcelo Guimaraes da Silva',
         email,
         password: '123456',
-      })
+      }),
     ).rejects.toBeInstanceOf(UserAlreadyExistsError);
   });
 });
